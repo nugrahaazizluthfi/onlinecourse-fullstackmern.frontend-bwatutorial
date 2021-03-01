@@ -1,7 +1,8 @@
-import React from 'react';
-import propTypes from 'prop-types';
-import './index.scss';
+import React from "react";
 
+import propTypes from "prop-types";
+
+import "./index.scss";
 export default function Star({ className, value, height, width, spacing }) {
   const decimals = Number(value) % 1;
 
@@ -15,23 +16,25 @@ export default function Star({ className, value, height, width, spacing }) {
         key={`star-${index}`}
         style={{
           left: index * width,
-          height,
+          height: height,
           width: width,
-          marginRight: spacing,
+          marginRight: spacing
         }}
       ></div>
     );
   }
-
-  if (decimals > 0 && value <= 5) {
+  if (decimals > 0 && value <= 5)
     star.push(
       <div
         className="star"
-        key={`star-with-decimals`}
-        style={{ left: leftPos, height, width: decimals * width - spacing }}
+        key={`starWithDecimal`}
+        style={{
+          left: leftPos,
+          height: height,
+          width: decimals * width - spacing
+        }}
       ></div>
     );
-  }
 
   const starPlaceholder = [];
   for (let index = 0; index < 5; index++) {
@@ -41,9 +44,9 @@ export default function Star({ className, value, height, width, spacing }) {
         key={`starPlaceholder-${index}`}
         style={{
           left: index * width,
-          height,
+          height: height,
           width: width,
-          marginRight: spacing,
+          marginRight: spacing
         }}
       ></div>
     );
@@ -52,7 +55,7 @@ export default function Star({ className, value, height, width, spacing }) {
   return (
     <>
       <div
-        className={['stars', className].join(' ')}
+        className={["stars", className].join(" ")}
         style={{ height: height }}
       >
         {starPlaceholder}
@@ -67,5 +70,5 @@ Star.propTypes = {
   value: propTypes.number,
   width: propTypes.number,
   height: propTypes.number,
-  spacing: propTypes.number,
+  spacing: propTypes.number
 };

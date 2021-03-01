@@ -1,20 +1,20 @@
-import React from 'react';
-import Button from 'elements/Button';
-import IconText from 'parts/IconText';
+import React from "react";
 
+import Button from "elements/Button";
+import IconText from "parts/IconText";
 export default function Footer() {
   return (
     <footer>
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-auto" style={{ width: 350 }}>
             <IconText />
-            <div className="brand-tagline">
-              We kaboom your beauty holiday instanly and memorable.
-            </div>
+            <p className="brand-tagline">
+              We kaboom your beauty holiday instantly and memorable.
+            </p>
           </div>
-          <div className="col-2 mr-5">
-            <div className="mt-2">For Beginner</div>
+          <div className="col-auto mr-5">
+            <h6 className="mt-2">For Beinners</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button type="link" href="/register">
@@ -22,23 +22,23 @@ export default function Footer() {
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button type="link" href="/register">
-                  Start Booking Room
+                <Button type="link" href="/properties">
+                  Start Booking a Room
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button type="link" href="/register">
+                <Button type="link" href="/use-payments">
                   Use Payments
                 </Button>
               </li>
             </ul>
           </div>
           <div className="col-2 mr-5">
-            <div className="mt-2">Explore Us</div>
+            <h6 className="mt-2">Explore Us</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
-                <Button type="link" href="/career">
-                  Our Career
+                <Button type="link" href="/careers">
+                  Our Careers
                 </Button>
               </li>
               <li className="list-group-item">
@@ -48,13 +48,13 @@ export default function Footer() {
               </li>
               <li className="list-group-item">
                 <Button type="link" href="/terms">
-                  Term & Conditions
+                  Terms & Conditions
                 </Button>
               </li>
             </ul>
           </div>
-          <div className="col-4">
-            <div className="mt-2">Connect Us</div>
+          <div className="col-3">
+            <h6 className="mt-2">Connect Us</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button
@@ -66,19 +66,19 @@ export default function Footer() {
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button isExternal type="link" href="tel:+622203883991">
-                  +622203883991
+                <Button isExternal type="link" href="tel:+622122081996">
+                  021 - 2208 - 1996
                 </Button>
               </li>
               <li className="list-group-item">
-                <span>Staycation, Kemang, Jakara</span>
+                <span>Staycation, Kemang, Jakarta</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="row">
           <div className="col text-center copyrights">
-            Copyright 2009 &copy; All rights reserved &copy; Staycation
+            Copyright 2019 • All rights reserved • Staycation
           </div>
         </div>
       </div>
